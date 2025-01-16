@@ -1,6 +1,8 @@
 # Car_Rental_System
 Overview
-The Car Rental System is a backend application that allows managing car rentals, vehicle availability tracking, and user booking management. It supports features like user profiles (with KYC), vehicle listings, booking conflict resolution, a dummy payment gateway, and booking history with cancellation policies.
+
+The Car Rental System is a backend application that allows managing car rentals, vehicle availability tracking, and user booking management. 
+It supports features like user profiles (with KYC), vehicle listings, booking conflict resolution, a dummy payment gateway, and booking history with cancellation policies.
 
 This system can be used for:
 
