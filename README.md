@@ -107,17 +107,6 @@ Here’s a high-level overview of the project structure:
 
 ![Screenshot 2025-01-21 at 15 47 35](https://github.com/user-attachments/assets/27b40167-6cc6-4c1e-9aff-b5aaf336b413)
 
-- **src/**: Contains all source code files.
-  - **controllers/**: Request handling logic.
-  - **models/**: Mongoose models for database.
-  - **routes/**: API route definitions.
-  - **services/**: Business logic and services.
-  - **middleware/**: Middleware for JWT verification, etc.
-  - **utils/**: Helper functions.
-  - **server.ts**: Main entry point for the application.
-- **.env**: Environment variables.
-- **package.json**: Project dependencies and scripts.
-- **tsconfig.json**: TypeScript configuration.
 
 ## Example API Endpoints
 
