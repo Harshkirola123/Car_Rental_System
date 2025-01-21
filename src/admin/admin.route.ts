@@ -5,6 +5,7 @@ import rentRouter from "../rentalCar/rental.route";
 import { completeKYC, uploadKYC } from "../common/helper/kyc.helper";
 import { checkKYC } from "../common/middlewar/kycChecker.middle";
 import authMiddleware from "../car/car.auth";
+import { loginAdminValidator, signupAdminValidator } from "./admin.validator";
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ const router = express.Router();
  * @param {Object} res - Express response object
  * @param {Function} next - Express next function
  */
-router.post("/signup", signupAdmin);
+router.post("/signup", signupAdminValidator, signupAdmin);
 /**
  * @description Route to complete KYC for an admin
  * @function
@@ -36,7 +37,7 @@ router.patch("/kycComplete", authMiddleware, uploadKYC, completeKYC);
  * @param {Object} res - Express response object
  * @param {Function} next - Express next function
  */
-router.post("/login", loginAdmin);
+router.post("/login", loginAdminValidator, loginAdmin);
 /**
  * @description Route for car operations
  * @function
