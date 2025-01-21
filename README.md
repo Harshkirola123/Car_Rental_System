@@ -105,7 +105,7 @@ Ensure you have the following installed on your machine:
 
 Here’s a high-level overview of the project structure:
 
-![Screenshot 2025-01-21 at 17 25 28](https://github.com/user-attachments/assets/00ce598d-7b2f-40c2-bea9-9124ae76247f)
+![Screenshot 2025-01-21 at 15 47 35](https://github.com/user-attachments/assets/27b40167-6cc6-4c1e-9aff-b5aaf336b413)
 
 - **src/**: Contains all source code files.
   - **controllers/**: Request handling logic.
