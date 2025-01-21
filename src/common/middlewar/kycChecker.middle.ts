@@ -2,6 +2,20 @@ import { Request, Response, NextFunction } from "express";
 import Renter from "../../renters/renter.schema";
 import Admin from "../../admin/admin.schema";
 
+/**
+ * Middleware to check if the user has completed KYC or not.
+ *
+ * This middleware is used to check if the user has completed KYC before
+ * allowing them to perform certain actions.
+ *
+ * @param {Request} req - The request object
+ * @param {Response} res - The response object
+ * @param {NextFunction} next - The next middleware or route handler
+ *
+ * @throws {Response} If the user is not found, it will return a 404 response.
+ * @throws {Response} If the user has not completed KYC, it will return a 403 response.
+ * @throws {Response} If there is an error, it will return a 500 response.
+ */
 export const checkKYC = async (
   req: Request,
   res: Response,

@@ -2,6 +2,12 @@ import { Request, Response } from "express";
 import Rental from "./rental.schema";
 import Car from "../car/car.schema";
 
+/**
+ * Processes a payment for a rental.
+ * @param {Request} req The Express Request object.
+ * @param {Response} res The Express Response object.
+ * @returns {Promise<void>}
+ */
 export const processPayment = async (req: Request, res: Response) => {
   const renterId = req.user?._id;
   const { rentalId } = req.body;

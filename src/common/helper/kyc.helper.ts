@@ -21,6 +21,23 @@ const upload = multer({ storage: storage });
 
 export const uploadKYC = upload.single("kycPhoto");
 
+/**
+ * Completes the KYC process for a user or admin by updating their KYC status and storing the KYC photo.
+ *
+ * @async
+ * @function
+ * @param {Request} req - Express request object, containing user details and the uploaded KYC photo.
+ * @param {Response} res - Express response object to send status and message.
+ *
+ * @description
+ * This function checks the user's role and updates the KYC status and photo path in the database.
+ * If the role is "USER", it updates the Renter collection.
+ * If the role is "ADMIN", it updates the Admin collection.
+ *
+ * @throws Will respond with a 400 error if the KYC photo is not provided or if the role is invalid.
+ * Responds with a 500 error if there is a server error during the update process.
+ */
+
 export const completeKYC = async (req: Request, res: Response) => {
   const userId = req.user?._id;
   const role = req.user?.role;

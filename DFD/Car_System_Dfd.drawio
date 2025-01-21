@@ -1,0 +1,115 @@
+<mxfile host="65bd71144e">
+    <diagram id="ylVxhadJ1VaJwkY7DLkN" name="Page-1">
+        <mxGraphModel dx="1122" dy="709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="ADMIN" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="49" y="110" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="RENTER" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="649" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="CAR&amp;nbsp;&lt;br&gt;DATABASE" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="269" y="270" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="RENTAL &lt;br&gt;DATABASE" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="379" y="440" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ADMIN&lt;br&gt;DATABASE" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="49" y="280" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="RENTER&lt;br&gt;DATABASE" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="659" y="295" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;entryX=0.442;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="99" y="170" as="sourcePoint"/>
+                        <mxPoint x="109" y="271" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="SignUo" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;rotation=0;" connectable="0" vertex="1" parent="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="709" y="190" as="sourcePoint"/>
+                        <mxPoint x="709" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399" y="260" as="sourcePoint"/>
+                        <mxPoint x="449" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="ADD CAR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="239" y="190" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="329" y="150" as="sourcePoint"/>
+                        <mxPoint x="640" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=classic;html=1;entryX=0.689;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="329" y="150" as="sourcePoint"/>
+                        <mxPoint x="449" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="CAR DETAIL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="459" y="110" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="SIGNUP&lt;br&gt;/&lt;br&gt;LOGIN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="709" y="210" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="RENTER RENT A CAR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="384" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=classic;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.633;exitY=0.01;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399" y="320" as="sourcePoint"/>
+                        <mxPoint x="449" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="CAR RENTAL INFO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="499" y="280" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="endArrow=classic;html=1;exitX=-0.017;exitY=0.77;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.575;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399" y="460" as="sourcePoint"/>
+                        <mxPoint x="449" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="CAR RENTAL&amp;nbsp; INFO OF ADMIN ADD CAR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="425" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=classic;html=1;entryX=0.317;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="690" y="290" as="sourcePoint"/>
+                        <mxPoint x="660" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="TOKEN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="220" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;exitX=0.017;exitY=0.24;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.933;entryY=0.913;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="309" y="400" as="sourcePoint"/>
+                        <mxPoint x="360" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="IF RENTER IS LOGIN IN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="380" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="ADMIN LOGIN NEEDED" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="210" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="BY MAIL OR MESSAGE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="315" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

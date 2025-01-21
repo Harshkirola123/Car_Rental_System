@@ -1,79 +1,53 @@
 import { NextFunction, Request, Response } from "express";
-import jwt from "jsonwebtoken";
-import Renter from "./renter.schema";
+import { renterSignupService, renterLoginService } from "./renter.service";
 import asyncHandler from "express-async-handler";
+import bcrypt from "bcryptjs";
 
+/**
+ * Handles Renter signup
+ * @param {Request} req - Express request object
+ * @param {Response} res - Express response object
+ * @param {NextFunction} next - Express next middleware function
+ */
 export const renterSignup = asyncHandler(
-  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  async (req: Request, res: Response, next: NextFunction): Promise<any> => {
     const { name, email, password } = req.body;
 
-    try {
-      const existingAdmin = await Renter.findOne({ email });
-      if (existingAdmin) {
-        res.status(400).json({ message: "User already exists" });
-        return;
-      }
-
-      const admin = await Renter.create({
-        name,
-        email,
-        password,
-        role: "USER",
-        active: true,
-      });
-      const token = jwt.sign(
-        { id: admin._id, email: admin.email, role: admin.role },
-        process.env.JWT_SECURITY as string,
-        { expiresIn: "1h" }
-      );
-
-      res.status(201).json({
-        message: "User created successfully.Please complete your KYC",
-        token: token,
-        admin: {
-          id: admin._id,
-          name: admin.name,
-          email: admin.email,
-          role: admin.role,
-        },
-      });
-      next();
-    } catch (error) {
-      console.error("Error signing up admin:", error);
-      res.status(500).json({ message: "Server error" });
-    }
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const result = await renterSignupService(name, email, hashedPassword);
+    res.cookie("refresh_token", result.token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 30 * 24 * 60 * 60 * 1000, // Refresh token expiry (e.g., 30 days)
+    });
+    return res.status(201).json(result.data);
+    next();
   }
 );
 
+/**
+ * Handles Renter login
+ * @param {Request} req - Express request object
+ * @param {Response} res - Express response object
+ * @param {NextFunction} next - Express next middleware function
+ */
 export const renterLogin = asyncHandler(
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const { email, password } = req.body;
 
-    try {
-      // Find the renter by email
-      const renter = await Renter.findOne({ email });
-      if (!renter) {
-        res.status(400).json({ message: "Invalid email or password" });
-        return;
-      }
+    const result = await renterLoginService(email, password);
+    res.cookie("refresh_token", result.rToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 30 * 24 * 60 * 60 * 1000, // Refresh token expiry (e.g., 30 days)
+    });
 
-      if (password != renter.password) {
-        res.status(400).json({ message: "Invalid email or password" });
-        return;
-      }
-
-      // Generate JWT token
-      const token = jwt.sign(
-        { id: renter._id, email: renter.email, role: renter.role },
-        process.env.JWT_SECURITY as string,
-        { expiresIn: "1h" }
-      );
-
-      res.status(200).json({ message: "Login successful", token });
-      next();
-    } catch (error) {
-      console.error("Error logging in renter:", error);
-      res.status(500).json({ message: "Server error" });
+    if (result.error) {
+      res.status(400).json({ message: result.error });
+      return;
     }
+
+    res.status(200).json(result.data);
+    next();
   }
 );

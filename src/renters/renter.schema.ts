@@ -2,8 +2,7 @@ import mongoose, { Schema, Document } from "mongoose";
 import { IUser } from "../common/dto/user.dto";
 
 export interface IRenter extends IUser {
-  rentals: mongoose.Types.ObjectId[];
-  // Reference to the Rental documents
+  rentals: mongoose.Types.ObjectId[]; // Reference to the Rental documents
 }
 
 const RenterSchema = new Schema<IRenter>({

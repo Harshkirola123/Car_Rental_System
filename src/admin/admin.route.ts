@@ -9,11 +9,49 @@ import authMiddleware from "../car/car.auth";
 const router = express.Router();
 
 // Route for admin signup
+/**
+ * @description Routes for admin operations
+ * @module admin/admin.route
+ */
+/**
+ * @description Route for admin signup
+ * @function
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
 router.post("/signup", signupAdmin);
-router.put("/kycComplete", authMiddleware, uploadKYC, completeKYC);
-// Route for admin login
+/**
+ * @description Route to complete KYC for an admin
+ * @function
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
+router.patch("/kycComplete", authMiddleware, uploadKYC, completeKYC);
+/**
+ * @description Route for admin login
+ * @function
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
 router.post("/login", loginAdmin);
+/**
+ * @description Route for car operations
+ * @function
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
 router.use("/cars", carRoutes);
+/**
+ * @description Route for car submit operations
+ * @function
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {Function} next - Express next function
+ */
 router.use("/carSubmit", rentRouter);
 
 export default router;

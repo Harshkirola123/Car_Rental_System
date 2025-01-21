@@ -1,0 +1,130 @@
+<mxfile host="65bd71144e">
+    <diagram id="t0ZTbp9lfYDni7G3nNA1" name="Page-1">
+        <mxGraphModel dx="1122" dy="709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="ADMIN" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="LOGIN" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="210" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="SIGNUP" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="200" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;html=1;entryX=0.663;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.4;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2" target="17" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="420" y="140" as="sourcePoint"/>
+                        <mxPoint x="380" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=classic;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="120" as="sourcePoint"/>
+                        <mxPoint x="440" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="TOKEN GENERATE" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="354" y="350" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.417;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="17" target="23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="360" as="sourcePoint"/>
+                        <mxPoint x="440" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;exitX=0.2;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.625;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="18" target="23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="360" as="sourcePoint"/>
+                        <mxPoint x="440" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="ADD CAR" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="UPDATE CAR" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="DELETE CAR" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="CAR" style="shape=datastore;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="362" y="640" width="96" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=classic;html=1;exitX=0.408;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="23" target="29" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="530" as="sourcePoint"/>
+                        <mxPoint x="440" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="" style="endArrow=classic;html=1;exitX=0.425;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.583;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="23" target="30" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="530" as="sourcePoint"/>
+                        <mxPoint x="440" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="endArrow=classic;html=1;exitX=0.433;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.425;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="23" target="31" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="530" as="sourcePoint"/>
+                        <mxPoint x="440" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="ADMIN" style="shape=datastore;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="220" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="17" target="36" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="410" as="sourcePoint"/>
+                        <mxPoint x="440" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=classic;startArrow=classic;html=1;opacity=90;entryX=-0.037;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="36" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="458" y="260" as="sourcePoint"/>
+                        <mxPoint x="508" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="DATA VERIFYING" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="220" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="ADDING NEW ADMIN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="210" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="endArrow=classic;html=1;opacity=90;exitX=0.433;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" parent="1" source="29" target="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="312" y="720" as="sourcePoint"/>
+                        <mxPoint x="362" y="670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=classic;html=1;opacity=90;exitX=0.45;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.15;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="30" target="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="389" y="610" as="sourcePoint"/>
+                        <mxPoint x="439" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;opacity=90;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="31" target="32" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="530" y="635" as="sourcePoint"/>
+                        <mxPoint x="580" y="585" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="ADD NEW CAR IF TOKEN IS GOOD" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="610" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="UPDATE INFO OF A CAR&amp;nbsp;&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="571" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="DELETE A CAR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="590" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="TOKEN VERIFICATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="450" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="70" width="20" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -21,7 +21,7 @@ const authMiddleware = asyncHandler(
     try {
       const decoded = jwt.verify(
         token,
-        process.env.JWT_SECURITY as string
+        process.env.JWT_SECURITY_ACCESS as string
       ) as JwtPayload;
 
       const admin = await Admin.findById(decoded.id).select("-password");

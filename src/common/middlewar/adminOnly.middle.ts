@@ -8,6 +8,16 @@ interface JwtPayload {
   role: string;
 }
 
+/**
+ * This middleware checks if the user making the request is an admin and if so, attaches the User object to the request.
+ * If the user is not an admin, it returns a 403 Forbidden status.
+ * If the token is invalid, it returns a 401 Unauthorized status.
+ * If the token is valid but the user is not an admin, it returns a 403 Forbidden status.
+ *
+ * @param {Request} req - The request object
+ * @param {Response} res - The response object
+ * @param {NextFunction} next - The next middleware or route handler
+ */
 const adminOnly = (req: Request, res: Response, next: NextFunction) => {
   const token = req.header("Authorization")?.replace("Bearer ", "");
 
@@ -19,7 +29,7 @@ const adminOnly = (req: Request, res: Response, next: NextFunction) => {
   try {
     const decoded = jwt.verify(
       token,
-      process.env.JWT_SECURITY as string
+      process.env.JWT_SECURITY_ACCESS as string
     ) as JwtPayload;
 
     Admin.findById(decoded.id)

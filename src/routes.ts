@@ -1,6 +1,7 @@
 import { Router } from "express";
 import adminRouter from "./admin/admin.route";
 import renterRouter from "./renters/renter.route";
+import { refreshToken } from "./common/middlewar/token.regenreate";
 const route = Router();
 
 /**
@@ -16,5 +17,6 @@ route.use("/admins", adminRouter);
  * @access Private
  */
 route.use("/renter", renterRouter);
+route.use("/refresh", refreshToken);
 
 export default route;

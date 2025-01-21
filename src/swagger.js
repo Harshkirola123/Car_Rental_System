@@ -1,14 +1,26 @@
-// swagger.js
 
 const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: {
-    title: "Car Rental API", // The title of your API
-    description: "API documentation for the Car Rental system", // A brief description of the API
+    title: "Car Rental API",
+    description: "API documentation for the Car Rental system",
   },
-  host: "localhost:5000", // The host where your API is running
-  schemes: ["http"], // The schemes used (http or https)
+  host: "localhost:5000",
+  schemes: ["http"],
+  securityDefinitions: {
+    BearerAuth: {
+      type: "apiKey",
+      in: "header",
+      name: "Authorization",
+      description: "Enter your Bearer token here",
+    },
+  },
+  security: [
+    {
+      BearerAuth: [],
+    },
+  ],
   definitions: {
     User: {
       type: "object",

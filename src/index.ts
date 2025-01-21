@@ -6,6 +6,7 @@ import { IUser } from "./common/dto/user.dto";
 import swaggerUi from "swagger-ui-express";
 import fs from "fs";
 import path from "path";
+import { limiter } from "./common/helper/api.limiter";
 
 const app = express();
 declare global {
@@ -15,6 +16,7 @@ declare global {
     }
   }
 }
+app.use(limiter);
 const swaggerDocument = JSON.parse(
   fs.readFileSync(path.join(__dirname, "swagger_output.json"), "utf8")
 );
