@@ -17,6 +17,7 @@ declare global {
   }
 }
 app.use(limiter);
+
 const swaggerDocument = JSON.parse(
   fs.readFileSync(path.join(__dirname, "swagger_output.json"), "utf8")
 );

@@ -2,8 +2,9 @@ import { Request, Response } from "express";
 import { createAccessToken, createRefreshToken } from "../helper/token.helper";
 import Renter from "../../renters/renter.schema"; // Assuming you have a User model
 import jwt from "jsonwebtoken";
+import Admin from "../../admin/admin.schema";
 interface JwtPayload {
-  id: string;
+  _id: string;
   email: string;
   role: string;
 }
@@ -22,7 +23,8 @@ export const refreshToken = async (
   req: Request,
   res: Response
 ): Promise<any> => {
-  const { refresh_token } = req.cookies;
+  // const { refresh_token } = req.cookies;
+  const refresh_token = req.header("Authorization")?.replace("Bearer ", "");
 
   if (!refresh_token) {
     return res.status(401).json({ message: "No refresh token provided" });
@@ -33,8 +35,13 @@ export const refreshToken = async (
       refresh_token,
       process.env.JWT_SECURITY_REFRESH as string
     ) as JwtPayload;
-
-    const user = await Renter.findById(decoded.id);
+    let user;
+    if (decoded.role == "USER") {
+      user = await Renter.findById(decoded._id);
+    } else {
+      user = await Admin.findById(decoded._id);
+    }
+    console.log(user);
     if (!user) {
       return res.status(403).json({ message: "User not found" });
     }

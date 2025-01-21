@@ -5,6 +5,12 @@ import { refreshToken } from "./common/middlewar/token.regenreate";
 const route = Router();
 
 /**
+ * @route /api/refresh
+ * @desc Route to refresh access token
+ * @access Public
+ */
+route.get("/refresh", refreshToken);
+/**
  * @route /api/admins/*
  * @desc Routes for admin operations
  * @access Private
@@ -17,6 +23,5 @@ route.use("/admins", adminRouter);
  * @access Private
  */
 route.use("/renter", renterRouter);
-route.use("/refresh", refreshToken);
 
 export default route;
